@@ -116,7 +116,7 @@ input, select, textarea {
 	}
 
 		a:hover {
-			color: #e44c65 !important;
+			color: #c39411 !important;
 			border-bottom-color: transparent;
 		}
 
@@ -3430,7 +3430,7 @@ input, select, textarea {
 						}
 
 					#header nav ul li.active > a, #header nav ul li.active > span {
-						color: #e44c65;
+						color: #000000;
 					}
 
 					#header nav ul li > ul {
@@ -3934,7 +3934,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #e44c65;
+						background: #222222;
 						color: rgba(255, 255, 255, 0.5);
 						content: '\f0c9';
 						display: block;
