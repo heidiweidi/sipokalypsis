@@ -1,5 +1,23 @@
 document.addEventListener("DOMContentLoaded", async () => {
+  // 1. Parse name from URL params
+  const urlParams = new URLSearchParams(window.location.search);
+  const name = urlParams.get("name") || "Friend";
 
+  // 2. Greeting templates
+  const greetings = [
+    `Hello ${name}, may your heart be lifted today by God's Word.`,
+    `${name}, here’s an encouraging scripture chosen for you.`,
+    `Peace and blessings to you, ${name}. Receive strength from this verse.`,
+    `Dear ${name}, may this passage inspire and comfort you today.`,
+    `Greetings ${name}! Here’s a verse that speaks to hope and faith.`,
+  ];
+  const greetingMsg = greetings[Math.floor(Math.random() * greetings.length)];
+
+  // Place greeting in page (expects an element with id="greeting")
+  const greetingElem = document.getElementById("greeting");
+  if (greetingElem) greetingElem.textContent = greetingMsg;
+
+  // 3. Bible references
   const references = [
     "John 3:16",
     "Philippians 4:13",
@@ -74,12 +92,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const randomRef = references[Math.floor(Math.random() * references.length)];
   const apiUrl = `https://bible-api.com/${encodeURIComponent(randomRef)}`;
 
-
   try {
     const apiResponse = await fetch(apiUrl);
     const data = await apiResponse.json();
-
-    console.log(data && data.text ? `Fetched verse: ${data.text}` : "No verse text found");
 
     if (data && data.text) {
       const verseElem = document.getElementById("verse");
