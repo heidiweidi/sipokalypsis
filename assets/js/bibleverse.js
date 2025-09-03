@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     `Peace and blessings to you, ${name}. Receive strength from this verse.`,
     `Dear ${name}, may this passage inspire and comfort you today.`,
     `Greetings ${name}! Here’s a verse that speaks to hope and faith.`,
+    `${name}, may this scripture bring light to your day.`,
+    `Hello ${name}, may you find joy and encouragement in this verse.`,
+    `${name}, may this scripture uplift your spirit and renew your faith.`,
+    `Blessings to you, ${name}. Let this verse be a source of strength.`,
+    `Dear ${name}, may this passage fill your heart with peace and hope.`,
+    `Hello ${name}, may God's Word guide and bless you today.`,
+    `${name}, may this scripture bring you comfort and joy.`,
   ];
   const greetingMsg = greetings[Math.floor(Math.random() * greetings.length)];
 
