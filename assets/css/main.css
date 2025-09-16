@@ -83,7 +83,10 @@ input, select, textarea {
 	}
 
 	html, body {
-		background: #1c1d26;
+		/*background: #1c1d26;*/
+		background-image: url('../images/bg2.png');
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -593,7 +596,6 @@ input, select, textarea {
 			-webkit-animation: overlay-hide 1.5s ease-in forwards !important;
 			-ms-animation: overlay-hide 1.5s ease-in forwards !important;
 			animation: overlay-hide 1.5s ease-in forwards !important;
-			background: #1c1d26;
 			content: '';
 			display: block;
 			height: 100%;
@@ -618,7 +620,7 @@ input, select, textarea {
 			-webkit-animation: none !important;
 			-ms-animation: none !important;
 			animation: none !important;
-			opacity: 1;
+			opacity: 0;
 			z-index: 100000;
 		}
 
