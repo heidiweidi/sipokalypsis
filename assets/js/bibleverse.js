@@ -104,15 +104,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = await apiResponse.json();
 
     if (data && data.text) {
+      const nameTxt = document.getElementById("namehere");
       const verseElem = document.getElementById("verse");
       const refElem = document.getElementById("reference");
       if (verseElem) verseElem.innerHTML = data.text.trim().replace(/\n/g, "<br>");
       if (refElem) refElem.textContent = data.reference;
+      if (nameTxt) nameTxt.textContent = name;
     } else {
+      if (document.getElementById("namehere")) document.getElementById("namehere").textContent = "";
       if (document.getElementById("verse")) document.getElementById("verse").textContent = "Verse not found.";
       if (document.getElementById("reference")) document.getElementById("reference").textContent = "";
     }
   } catch (err) {
+    if (document.getElementById("namehere")) document.getElementById("namehere").textContent = "";
     if (document.getElementById("verse")) document.getElementById("verse").textContent = "Error fetching verse.";
     if (document.getElementById("reference")) document.getElementById("reference").textContent = "";
   }
