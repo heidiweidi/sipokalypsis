@@ -1,159 +1,311 @@
-<!DOCTYPE HTML>
-<!--
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Sipokalypsis</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>A Word of Wisdom</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		<!-- Header
-			<header id="header">
-				<nav>
-					<ul>
-						<li><a href="#intro">Reveal</a></li>
-						<li><a href="#one">Believe</a></li>
-						<li><a href="#two">Who I Am</a></li>
-						<li><a href="#work">My Work</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</header>
-		-->
-		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content">
-					<header>						
-						<h3 id="greeting"></h3>
-					</header>						
-						<h2 id="verse"></h2>
-						<h3 id="reference"></h3>
-					<!--
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
-					-->
-				</div>
-			</section>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant SC', serif;
+            padding: 20px;
+            transition: background 0.8s ease;
+        }
 
-		<!-- One
-			<section id="one" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2 id="verse"></h2>
-					</header>
-					<p id="reference"></p>
-				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
-			</section>
+        /* body.bg-1 {
+            background: linear-gradient(135deg, #ff9a8b 0%, #ff6b6b 25%, #feca57 50%, #ff9a8b 75%, #ff6b6b 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
 
-		Two
-			<section id="two" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Who I Am</h2>
-					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
-			</section>
+        body.bg-2 {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #00d2ff 50%, #2a5298 75%, #1e3c72 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
 
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        } */
 
-			<section id="work" class="main style3 primary">
-				<div class="content">
-					<header>
-						<h2>My Work</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
-					</header>
+        body.bg-1 {
+            background: url('images/1.png') no-repeat center center fixed;
+            background-size: cover;
+        }
 
-					Gallery
-						<div class="gallery">
-							<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
-							</article>
-						</div>
+        body.bg-2 {
+            background: url('images/2.png') no-repeat center center fixed;
+            background-size: cover;
+        }
 
-				</div>
-			</section>
+        body.bg-3 {
+            background: url('images/3.png') no-repeat center center fixed;
+            background-size: cover;
+        }
 
+        .container {
+            max-width: 600px;
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
 
-			<section id="contact" class="main style3 secondary">
-				<div class="content">
-					<header>
-						<h2>Say Hello.</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
-					</header>
-					<div class="box">
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-							</div>
-							<ul class="actions special">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-					</div>
-				</div>
-			</section>
- 		-->
-		<!-- Footer -->
-			<footer id="footer">
+        h1 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            font-weight: normal;
+        }
 
-				<!-- Icons
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-					</ul>
- 				-->
-				<!-- Menu -->
-					<ul class="menu">
-						<li><img id="logo" src="images/logo.png" alt="sipokalypsis"></li><li>&copy; Sipokalypsis. All rights reserved.</li><li> <a href="https://sipokalypsis.com">Sipokalypsis.com</a></li>
-					</ul>
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
 
+        .verse-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px 30px;
+            margin-top: 20px;
+        }
+
+        .verse-text {
+            font-size: 2rem;
+            line-height: 1.5rem;
+            color: #000000;
+            font-style: none;
+            margin-bottom: 25px;
+        }
+
+        .verse-reference {
+            font-size: 1.5rem;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .loading {
+            color: #666;
+            font-size: 1.5rem;
+			line-height: 1.5rem;
+        }
+
+        .error {
+            color: #c0392b;
+            font-size: 1rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 0 0 24px 0;
+        }
+
+        header img {
+            max-width: 150px;
+            width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+		
+		.copyright {
+			padding: 20px 0 0 0;
+            color: #fff;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+            .verse-text {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-1">
+        <div class="container">
+            <header>
+                <img src="images/logo-white.png" alt="Sipokalypsis Logo">
+            </header>
+            
+			<h1 id="greeting">Hello Friend, here's some inspiring word of wisdom for you today...</h1>
+
+			<div class="verse-container">
+				<p class="verse-text" id="verse-text">
+					<span class="loading">Loading...</span>
+				</p>
+				<p class="verse-reference" id="verse-reference"></p>
+			</div>
+			
+			<footer>
+				<p class="copyright"><a href="https://sipokalypsis.com" target="_blank">sipokalypsis</a> &copy; 2025 All rights reserved.</p>
 			</footer>
+    </div>
 
-		<!-- Scripts -->
-		 	<script src="assets/js/bibleverse.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <script>
+        const FALLBACK_VERSE = {
+            text: "Trust in the Lord with all your heart and lean not on your own understanding. In all your ways acknowledge Him, and He shall direct your paths.",
+            reference: "Proverbs 3:5-6"
+        };
 
-	</body>
+        function getUrlParameter(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        const urlName = getUrlParameter('name');
+        const name = urlName ? urlName.trim() : 'Friend';
+
+        const greetings = [
+            `Hello ${name}, may your heart be lifted today by God's Word.`,
+            `${name}, here's an encouraging scripture chosen for you.`,
+            `Peace and blessings to you, ${name}. Receive strength from this verse.`,
+            `Dear ${name}, may this passage inspire and comfort you today.`,
+            `Greetings ${name}! Here's a verse that speaks to hope and faith.`,
+            `${name}, may this scripture bring light to your day.`,
+            `Hello ${name}, may you find joy and encouragement in this verse.`,
+            `${name}, may this scripture uplift your spirit and renew your faith.`,
+            `Blessings to you, ${name}. Let this verse be a source of strength.`,
+            `Dear ${name}, may this passage fill your heart with peace and hope.`,
+            `Hello ${name}, may God's Word guide and bless you today.`,
+            `${name}, may this scripture bring you comfort and joy.`,
+        ];
+
+        const references = [
+            "John 3:16",
+            "Philippians 4:13",
+            "Proverbs 3:5",
+            "Romans 8:28",
+            "Psalm 23:1",
+            "Isaiah 41:10",
+            "Joshua 1:9",
+            "Psalm 46:1",
+            "1 Corinthians 13:4",
+            "Ephesians 2:10",
+            "Ephesians 5:8",
+            "Isaiah 26:3",
+            "Psalm 119:105",
+            "Romans 12:2",
+            "2 Timothy 1:7",
+            "Philippians 4:6-7",
+            "Matthew 11:28-30",
+            "Psalm 37:4",
+            "Jeremiah 29:11",
+            "1 Peter 5:7",
+            "Hebrews 13:5-6",
+            "Psalm 91:1-2",
+            "Romans 15:13",
+            "Psalm 34:18",
+            "James 1:5",
+            "Colossians 3:23-24",
+            "Galatians 5:22-23",
+            "Psalm 118:24",
+            "Matthew 5:16",
+            "Psalm 139:14",
+            "1 John 4:19",
+            "Romans 5:8",
+            "Psalm 100:4-5",
+            "2 Corinthians 5:17",
+            "Philippians 1:6",
+            "Psalm 121:1-2",
+            "Proverbs 16:3",
+            "Isaiah 40:31",
+            "Matthew 6:33-34",
+            "Psalm 30:5",
+            "Romans 10:9-10",
+            "1 Thessalonians 5:16-18",
+            "Psalm 119:11",
+            "2 Corinthians 12:9",
+            "Psalm 73:26",
+            "John 14:27",
+            "Proverbs 18:10",
+            "Psalm 19:14",
+            "1 Chronicles 16:11",
+            "Psalm 55:22",
+            "Isaiah 43:2",
+            "Psalm 62:5-6",
+            "Romans 8:31",
+            "1 Corinthians 10:13",
+            "Psalm 119:114",
+            "Psalm 16:11",
+            "Psalm 37:5",
+            "Psalm 119:165",
+            "Psalm 40:1-3",
+            "Psalm 91:11-12",
+            "Psalm 145:18-19",
+            "Romans 8:38-39",
+            "2 Corinthians 4:16-18",
+            "Philippians 3:13-14",
+            "Colossians 1:9-10",
+            "Ecclesiastes 3:11",
+            "Psalm 140:6-7",
+            "Psalm 141:1-4",
+        ];
+
+        function setBackground(bgNumber) {
+            const validBg = bgNumber ? parseInt(bgNumber) : 1;
+            const bg = validBg >= 1 && validBg <= 3 ? validBg : 1;
+            document.body.classList.remove('bg-1', 'bg-2', 'bg-3');
+            document.body.classList.add(`bg-${bg}`);
+        }
+
+        async function fetchRandomVerse() {
+            const verseTextEl = document.getElementById('verse-text');
+            const verseRefEl = document.getElementById('verse-reference');
+
+            const randomRef = references[Math.floor(Math.random() * references.length)];
+            const apiRef = randomRef.replace(/ /g, '+');
+
+            try {
+                const response = await fetch(`https://bible-api.com/${apiRef}`);
+
+                if (!response.ok) {
+                    throw new Error('API request failed');
+                }
+
+                const data = await response.json();
+
+                verseTextEl.innerHTML = `<span class="loading">${data.text}</span>`;
+                verseRefEl.textContent = data.reference;
+            } catch (error) {
+                console.error('Error fetching verse:', error);
+                verseTextEl.innerHTML = `<span class="error">${FALLBACK_VERSE.text}</span>`;
+                verseRefEl.textContent = FALLBACK_VERSE.reference;
+            }
+        }
+
+        function init() {
+            const bg = getUrlParameter('bg');
+
+            const greetingMsg = greetings[Math.floor(Math.random() * greetings.length)];
+            const greetingElem = document.getElementById("greeting");
+            if (greetingElem) greetingElem.textContent = greetingMsg;
+
+            setBackground(bg);
+            fetchRandomVerse();
+        }
+
+        init();
+    </script>
+</body>
 </html>
